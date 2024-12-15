@@ -6,5 +6,5 @@ url = 'http://localhost:8080/2024-11-07/functions/function/invocations'
 
 data = {'url': './data/Clams/10711395_a16c4c2901_o.jpg'}
 
-result = requests.post(url, json=data)
-print(json.dumps(result))
+result = requests.post(url, json=data).json()
+print(result)
