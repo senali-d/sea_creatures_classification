@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import requests
 import numpy as np
 import tflite_runtime.interpreter as tflite
 from PIL import Image
+from io import BytesIO
 
 url = './data/Clams/10711395_a16c4c2901_o.jpg'
 
@@ -45,8 +47,15 @@ def preprocess_input(x):
   return x
 
 def predict(url):
-  with Image.open(url) as img:
-    img = img.resize((299,299), Image.NEAREST)
+  if url.startswith('http://') or url.startswith('https://'):
+    
+    response = requests.get(url)
+    response.raise_for_status()
+    with Image.open(BytesIO(response.content)) as img:
+      img = img.resize((299, 299), Image.NEAREST)
+  else:
+    with Image.open(url) as img:
+      img = img.resize((299, 299), Image.NEAREST)
 
   x = np.array(img, dtype='float32')
   X = np.array([x])
