@@ -9,6 +9,7 @@ matplotlib = "*"
 tensorflow = "*"
 scipy = "*"
 numpy = "~=1.23.1"
+keras-image-helper = "*"
 
 [dev-packages]
 jupyter = "*"

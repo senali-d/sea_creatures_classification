@@ -4,13 +4,14 @@
 import requests
 import numpy as np
 import tflite_runtime.interpreter as tflite
-from PIL import Image
-from io import BytesIO
+from keras_image_helper import create_preprocessor
 
 url = './data/Clams/10711395_a16c4c2901_o.jpg'
 
 interpreter = tflite.Interpreter(model_path='sea-creature-model.tflite')
 interpreter.allocate_tensors()
+
+preprocessor = create_preprocessor('xception', target_size=(299,299))
 
 input_index = interpreter.get_input_details()[0]['index']
 output_index = interpreter.get_output_details()[0]['index']
@@ -47,19 +48,7 @@ def preprocess_input(x):
   return x
 
 def predict(url):
-  if url.startswith('http://') or url.startswith('https://'):
-    
-    response = requests.get(url)
-    response.raise_for_status()
-    with Image.open(BytesIO(response.content)) as img:
-      img = img.resize((299, 299), Image.NEAREST)
-  else:
-    with Image.open(url) as img:
-      img = img.resize((299, 299), Image.NEAREST)
-
-  x = np.array(img, dtype='float32')
-  X = np.array([x])
-  X = preprocess_input(X)
+  X = preprocessor.from_url(url)
 
   interpreter.set_tensor(input_index, X)
   interpreter.invoke()
