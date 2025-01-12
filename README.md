@@ -123,3 +123,9 @@ If setup is correct, the following output should be displayed:
 ```
 
 ## Demo
+
+<img width="1125" alt="Screenshot 2025-01-12 at 3 12 18 AM" src="https://github.com/user-attachments/assets/dacadaeb-51c8-44d9-8f83-e408787b6873" />
+
+<img width="1512" alt="Screenshot 2025-01-12 at 3 49 25 AM" src="https://github.com/user-attachments/assets/89d02601-7838-4c5f-9668-7a8c41b1a12d" />
+
+
