@@ -15,14 +15,14 @@ Solution: Classifying sea creatures can aid in:
 
 By integrating sea creature classification into conservation workflows, researchers and policymakers can better understand, monitor, and protect marine ecosystems. This technology not only saves time and resources but also provides critical insights into the health of our oceans, helping to safeguard biodiversity for future generations.
 
-### Methods and tools available for customer churn prediction
+### Methods and tools available for sea creature classification
 
 ### Steps
 1. Collect customer data of Sea animals.
 2. Preprocess the data by cleaning, filling missing values, and resampling if necessary.
 3. Train the model on the historical data.
 5. Validate the model's performance using evaluation metrics.
-6. Make prediction.
+6. Make classification.
 
 ### Dataset
 
@@ -32,29 +32,31 @@ dataset has now 23 different Sea animal classes
 
 This dataset contain below categories of images of sea creatures:
 
-Seahorse
-Nudibranchs
-Sea Urchins
-Octopus
-Puffers
-Rays
-Whales
-Eels
-Crabs
-Squid
-Corals
-Dolphins
-Seal
-Penguin
-Starfish
-Lobster
-Jelly Fish
-Sea Otter
-Fish
-Shrimp
-Clams
+1. Seahorse
+2. Nudibranchs
+3. Sea Urchins
+4. Octopus
+5. Puffers
+6. Rays
+7. Whales
+8. Eels
+9. Crabs
+10. Squid
+11. Corals
+12. Dolphins
+13. Seal
+14. Penguin
+15. Starfish
+16. Lobster
+17. Jelly Fish
+18. Sea Otter
+19. Fish
+20. Shrimp
+21. Clams
+22. Fish
+23. Turtle Tortoise
 
-Aim is to Predict the Customer Churn for ABC Bank.
+Aim is to classify the sea creatures
 
 
 ## How to run this project?
@@ -121,4 +123,3 @@ If setup is correct, the following output should be displayed:
 ```
 
 ## Demo
-
