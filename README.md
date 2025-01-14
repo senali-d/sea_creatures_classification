@@ -18,8 +18,8 @@ By integrating sea creature classification into conservation workflows, research
 ### Methods and tools available for sea creature classification
 
 ### Steps
-1. Collect customer data of Sea animals.
-2. Preprocess the data by cleaning, filling missing values, and resampling if necessary.
+1. Collect data of Sea animals (images).
+2. Preprocess the data by cleaning and resampling if necessary.
 3. Train the model on the historical data.
 5. Validate the model's performance using evaluation metrics.
 6. Make classification.
@@ -122,7 +122,7 @@ If setup is correct, the following output should be displayed:
  'Whale': -3.8058106899261475}
 ```
 
-## Demo
+## Reference
 
 <img width="1125" alt="Screenshot 2025-01-12 at 3 12 18 AM" src="https://github.com/user-attachments/assets/dacadaeb-51c8-44d9-8f83-e408787b6873" />
 
